@@ -8,4 +8,5 @@ import reactor.core.publisher.Mono;
 public interface PersonService {
   Flux<Person> getAll();
   Mono<Person> getByNickname(String nickname);
+  void save(Person person);
 }

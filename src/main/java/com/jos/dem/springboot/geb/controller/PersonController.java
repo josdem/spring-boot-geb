@@ -14,7 +14,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("persons/**")
 public class PersonController {
 
   @Autowired
@@ -27,6 +26,13 @@ public class PersonController {
     log.info("Listing persons");
     model.addAttribute("persons", personService.getAll());
     return "list";
+  }
+
+  @RequestMapping(method=GET ,value="create")
+  public String create(final Model model){
+    log.info("Creating person");
+    model.addAttribute("person", new Person());
+    return "create";
   }
 
   @RequestMapping(method=POST, value="save")

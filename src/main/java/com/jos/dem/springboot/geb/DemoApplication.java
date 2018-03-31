@@ -1,4 +1,4 @@
-package com.example.springbootgeb;
+package com.jos.dem.springboot.geb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

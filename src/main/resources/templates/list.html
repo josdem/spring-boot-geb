@@ -1,3 +1,8 @@
 <html>
-  Listing persons!
+  <body>
+    <div th:each="person : ${persons}">
+        <h3 th:text="${person.nickname}" />
+        <p th:text="${person.email}" />
+    </div>
+  </body>
 </html>

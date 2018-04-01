@@ -1,29 +1,26 @@
 <html>
 
 <body>
+
   <form id="register" th:action="@{/save}" th:object="${person}" method="post">
-    <div class="form-group">
-      <label class="col-sm-1 col-form-label-lg" for="nickname">
-        <h4 th:text="#{person.nickname}" />
-      </label>
-      <input class="form-control form-control-lg" type="text" name='nickname' th:field="*{nickname}" placeholder="nickname" id='nickname'
-      />
-      <label th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}"></label>
-    </div>
+    <label for="nickname">
+      <h4 th:text="#{person.nickname}" />
+    </label>
+    <input type="text" name='nickname' th:field="*{nickname}" placeholder="nickname" id='nickname' />
+    <label th:if="${#fields.hasErrors('nickname')}" th:errors="*{nickname}"></label>
     <br/>
-    <div class="form-group">
-      <label class="col-sm-1 col-form-label-lg" for="email">
-        <h4 th:text="#{person.email}" />
-      </label>
-      <input class="form-control form-control-lg" type="text" name='email' th:field="*{email}" placeholder="Email" id='email' />
-      <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
-    </div>
+    <label for="email">
+      <h4 th:text="#{person.email}" />
+    </label>
+    <input type="text" name='email' th:field="*{email}" placeholder="Email" id='email' />
+    <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
     <br/>
     <br/>
-    <button class="btn btn-success" id="success" type="submit">
+    <button id="success" type="submit">
       <p th:text="#{button.submit}" />
     </button>
   </form>
+
 </body>
 
 </html>

@@ -11,6 +11,7 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
@@ -22,11 +23,24 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-webflux')
   compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+  compile('org.codehaus.groovy:groovy-all')
 	compileOnly('org.projectlombok:lombok')
+  testCompile('org.gebish:geb-spock:2.1')
+  testCompile('org.seleniumhq.selenium:selenium-chrome-driver:3.11.0')
+  testCompile('org.seleniumhq.selenium:selenium-firefox-driver:3.11.0')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('io.projectreactor:reactor-test')
+  testCompile('org.spockframework:spock-spring')
+  testCompile('org.spockframework:spock-core:1.1-groovy-2.4')
+  testCompile('org.spockframework:spock-spring:1.1-groovy-2.4')
+  testCompile("io.github.bonigarcia:webdrivermanager:1.5.0") {
+    exclude group: 'org.seleniumhq.selenium'
+  }
+}
+
+configure(test) {
+  systemProperties System.properties
 }

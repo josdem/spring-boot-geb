@@ -16,7 +16,7 @@
     <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
     <br/>
     <br/>
-    <button id="success" type="submit">
+    <button name="submit" type="submit">
       <p th:text="#{button.submit}" />
     </button>
   </form>

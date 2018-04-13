@@ -19,7 +19,7 @@ public class PersonController {
   @Autowired
   private PersonService personService;
 
-  Logger log = LoggerFactory.getLogger(this.getClass());
+  private Logger log = LoggerFactory.getLogger(this.getClass());
 
   @RequestMapping(method=GET)
   public String persons(final Model model){
@@ -35,7 +35,7 @@ public class PersonController {
     return "create";
   }
 
-  @RequestMapping(method=POST, value="save")
+  @RequestMapping(method=POST)
   public String save(final Person person, final Model model){
     log.info("Saving person");
     personService.save(person);

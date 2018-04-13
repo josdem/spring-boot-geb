@@ -1,7 +1,9 @@
 .gradle
-.classpath        
+.classpath
 .project
 .settings
 .vscode
 build/
 bin/
+**swp
+**swo

@@ -1,6 +1,7 @@
 package com.jos.dem.springboot.geb
 
 import geb.spock.GebReportingSpec
+import com.jos.dem.springboot.geb.pages.PersonList
 
 class CreatePersonSpec extends GebReportingSpec {
 
@@ -13,8 +14,8 @@ class CreatePersonSpec extends GebReportingSpec {
       $("input", name: "email").value("joseluis.delacruz@gmail.com")
       $("button", name: "submit").click()
 
-    then:     
-      assert $("#search").text().contains("josdem.io")
+    then:
+      at PersonList
     }
-    
+
 }

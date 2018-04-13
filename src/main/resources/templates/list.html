@@ -1,4 +1,7 @@
 <html>
+  <head>
+    <title>Person List</title>
+  </head>
   <body>
     <div th:each="person : ${persons}">
         <h3 th:text="${person.nickname}" />

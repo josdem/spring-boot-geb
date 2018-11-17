@@ -4,7 +4,7 @@ import geb.Page
 
 class PersonList extends Page {
 
-  static url = "list"
+  static url = "persons/list"
   static at = { title == "Person List" }
   static content = {
   }

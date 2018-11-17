@@ -7,7 +7,7 @@ class CreatePersonSpec extends GebReportingSpec {
 
   void 'should create person'() {
     given:
-      go "http://localhost:8080/create"
+      go "http://localhost:8080/persons/create"
 
     when:
       $("input", name: "nickname").value("josdem")

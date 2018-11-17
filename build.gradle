@@ -34,9 +34,7 @@ dependencies {
   testCompile('org.seleniumhq.selenium:selenium-firefox-driver:3.141.59')
   testCompile('org.spockframework:spock-spring')
   testCompile('org.spockframework:spock-spring:1.1-groovy-2.4')
-  testCompile("io.github.bonigarcia:webdrivermanager:2.2.5") {
-    exclude group: 'org.seleniumhq.selenium'
-  }
+  testCompile("io.github.bonigarcia:webdrivermanager:2.2.5")
 }
 
 configure(test) {

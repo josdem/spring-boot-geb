@@ -1,13 +1,13 @@
 buildscript {
-	ext {
-		springBootVersion = '2.1.0.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+  ext {
+    springBootVersion = '2.1.0.RELEASE'
+  }
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+  }
 }
 
 apply plugin: 'java'
@@ -24,17 +24,17 @@ repositories {
 }
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-webflux')
+  compile('org.springframework.boot:spring-boot-starter-webflux')
   compile('org.springframework.boot:spring-boot-starter-thymeleaf')
   compile('org.codehaus.groovy:groovy-all')
-	compileOnly('org.projectlombok:lombok')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
-	testCompile('io.projectreactor:reactor-test')
-	testCompile('org.gebish:geb-spock:2.1')
-  testCompile('org.seleniumhq.selenium:selenium-firefox-driver:3.11.0')
+  compileOnly('org.projectlombok:lombok')
+  testCompile('org.springframework.boot:spring-boot-starter-test')
+  testCompile('io.projectreactor:reactor-test')
+  testCompile('org.gebish:geb-spock:2.2')
+  testCompile('org.seleniumhq.selenium:selenium-firefox-driver:3.141.59')
   testCompile('org.spockframework:spock-spring')
   testCompile('org.spockframework:spock-spring:1.1-groovy-2.4')
-  testCompile("io.github.bonigarcia:webdrivermanager:1.5.0") {
+  testCompile("io.github.bonigarcia:webdrivermanager:3.0.0") {
     exclude group: 'org.seleniumhq.selenium'
   }
 }

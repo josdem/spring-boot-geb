@@ -5,10 +5,9 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.Data;
 
-@AllArgsConstructor
-@ToString
-@NoArgsConstructor
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Person {
 
   private String nickname;
